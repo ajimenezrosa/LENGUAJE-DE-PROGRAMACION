@@ -90,3 +90,118 @@ namespace PracticaLP.Controllers
 ####   recuerda que este código se agrega en este repositorio para que te sea más fácil crear el programa.
 ####   Analízalo míralo detenidamente y recuerda:
 ####   ***La clave del éxito es la constancia***
+
+
+
+## Configurar la Clase startup
+
+#### Net.core 6 no crea la clase de inicio para nosotros, procederemos a crearla nosotros mismos.
+   #### Cabe señalar que el programa funciona correctamente sin esto, pero por un tema de organización voy a crear esta clase y mover los códigos de nuestra clase de programas
+
+~~~C#
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+~~~
+
+## Crearemos la clase de inicio
+
+#### Al final de la misma debe ser como sigue.
+~~~C#
+namespace PracticaLP
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        public void ConfigureServices(IServiceCollection service)
+        {
+            service.AddControllers();
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            service.AddEndpointsApiExplorer();
+            service.AddSwaggerGen();
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+
+            app.UseAuthorization();
+
+            //app.MapControllers();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+        }
+
+        internal void ConfigureServicces(IServiceCollection services)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
+~~~
+
+y nuestra Clase de programs debe quedar asi.
+~~~C#
+
+using PracticaLP;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+var startup = new Startup(builder.Configuration);
+
+startup.ConfigureServices(builder.Services);
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+
+startup.Configure(app, app.Environment);
+
+app.Run();
+
+~~~

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {}
+    "F:\\Fuentes\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {}
   },
   "projects": {
-    "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {
+    "F:\\Fuentes\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
+        "projectUniqueName": "F:\\Fuentes\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
         "projectName": "PracticaLP",
-        "projectPath": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
-        "packagesPath": "C:\\Users\\jajim\\.nuget\\packages\\",
-        "outputPath": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\obj\\",
+        "projectPath": "F:\\Fuentes\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "F:\\Fuentes\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jajim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -63,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

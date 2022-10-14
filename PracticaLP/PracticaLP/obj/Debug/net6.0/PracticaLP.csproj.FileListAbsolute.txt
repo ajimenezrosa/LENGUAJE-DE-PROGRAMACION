@@ -25,3 +25,30 @@ E:\UCSD\git_LENGUAJE DE PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\refi
 E:\UCSD\git_LENGUAJE DE PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.pdb
 E:\UCSD\git_LENGUAJE DE PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.genruntimeconfig.cache
 E:\UCSD\git_LENGUAJE DE PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\ref\PracticaLP.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\appsettings.Development.json
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\appsettings.json
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\PracticaLP.exe
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\PracticaLP.deps.json
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\PracticaLP.runtimeconfig.json
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\PracticaLP.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\PracticaLP.pdb
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\Microsoft.OpenApi.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.csproj.AssemblyReference.cache
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.GeneratedMSBuildEditorConfig.editorconfig
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.AssemblyInfoInputs.cache
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.AssemblyInfo.cs
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.csproj.CoreCompileInputs.cache
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.MvcApplicationPartsAssemblyInfo.cs
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.MvcApplicationPartsAssemblyInfo.cache
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\staticwebassets.build.json
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\staticwebassets.development.json
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\scopedcss\bundle\PracticaLP.styles.css
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.csproj.CopyComplete
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\refint\PracticaLP.dll
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.pdb
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\PracticaLP.genruntimeconfig.cache
+F:\Fuentes\LENGUAJE-DE-PROGRAMACION\PracticaLP\PracticaLP\obj\Debug\net6.0\ref\PracticaLP.dll
