@@ -205,3 +205,27 @@ startup.Configure(app, app.Environment);
 app.Run();
 
 ~~~
+
+ 
+#
+
+## Vamos a instalar Entity Framework Core en nuestra aplicación.
+#### Con Entity Framework core podemos crear una base de datos a partir de código C#
+
+#### No solo eso a través de este podemos conectarnos a bases de datos existentes.
+#### También podemos usar el DBcontext, que es donde podemos configurar el entityframework Core.
+#### También podemos configurar la cadena de conexión, que es lo que dice a que base de datos nos estamos conectando, además de esto nos permito colocar  validación para nuestras tablas entre otras cosas.
+
+
+
+    Instalando en el proyecto...
+
+       Microsoft.EntityFrameworkCore.SqlServer
+
+       Esto solo las personas que estan utilizando Visual Studio. Si estas utilizando Visual Studio Code no debes intalar este paquete.
+       Microsoft.EntityFrameworkCore.tool
+     
+     
+    dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+
