@@ -253,10 +253,59 @@ con ella podemos hacer las diferentes configuraciones de nuestro DBContext.  per
 #
 
 
-Como un ejemplo crearemos una tabla a partir del esquema Maestros
+## Como ejemplo crearemos una tabla a partir del esquema Maestro
 ~~~C#
         public DbSet<Maestro> Maestros { get; set; }
 ~~~        
 
 
 #### Lo que le digo al sistema en este caso es que se creará una tabla a partir de la Clase Maestro  con sus valores.
+#
+
+##### En este punto del programa, nuestra clase ApplicationDbContext se vería así
+~~~C#
+using Microsoft.EntityFrameworkCore;
+using PracticaLP.Entidades;
+
+namespace PracticaLP
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        public DbSet<Author> Authores { get; set; }
+    }
+}
+
+~~~
+
+esto quiere decir que se creara una tabla con los valores que tenemos en nuestra clase de Maestro. Clara que para esto primero debemos configurar nuestra conexion a base de datos y esto lo haremos en **appsettings.json**
+
+~~~json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "defaultConnection": "Data Souce=(localdb)\\mssqllocaldb;Initial Catalog=WebApis;Integrated Security=True"
+  },
+  "AllowedHosts": "*"
+}
+
+~~~
+
+Explicaremos un poco lo que hicimos:
+
+El **Data Source** Serial el nombre del servidor de Base de Datos
+El **Initial Catalog** Seria el nombre de la base de datos que utilizarmos
+el **Integrated Security** se refiere a que utilizarmos la claves del sistema operativo Windows para autenticarnos en la DB.
+
+Nota: Tambien podemos colocar en este caso un usuario y password si lo deseamos.
+
+#
+
