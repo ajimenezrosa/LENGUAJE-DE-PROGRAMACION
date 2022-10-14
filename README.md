@@ -1,5 +1,13 @@
 # LENGUAJE-DE-PROGRAMACION" 
 
+
+
+
+[ - Configurar la Clase startup](#startup)
+
+
+
+
 ### Creamos la Clase MaestroController
 #### simpre los controladores se crean con el nombre del controlador seguido de la palabra controller todo pegado
 
@@ -93,7 +101,7 @@ namespace PracticaLP.Controllers
 
 
 
-## Configurar la Clase startup
+## Configurar la Clase startup <a name="startup"></a>
 
 #### Net.core 6 no crea la clase de inicio para nosotros, procederemos a crearla nosotros mismos.
    #### Cabe señalar que el programa funciona correctamente sin esto, pero por un tema de organización voy a crear esta clase y mover los códigos de nuestra clase de programas
@@ -308,4 +316,62 @@ el **Integrated Security** se refiere a que utilizarmos la claves del sistema op
 Nota: Tambien podemos colocar en este caso un usuario y password si lo deseamos.
 
 #
+## Ahora volvemos a la clase Startup al método configure services en el cual configuraremos nuestra conexión a la base de datos, que en nuestro caso es sql server
+
+
+~~~c#
+using Microsoft.EntityFrameworkCore;
+namespace PracticaLP
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        public void ConfigureServices(IServiceCollection service)
+        {
+            service.AddControllers();
+
+            service.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            service.AddEndpointsApiExplorer();
+            service.AddSwaggerGen();
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+
+            app.UseAuthorization();
+
+            //app.MapControllers();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+        }
+
+        internal void ConfigureServicces(IServiceCollection services)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+~~~
 

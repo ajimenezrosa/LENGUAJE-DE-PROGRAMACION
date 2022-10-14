@@ -1,4 +1,5 @@
-﻿namespace PracticaLP
+﻿using Microsoft.EntityFrameworkCore;
+namespace PracticaLP
 {
     public class Startup
     {
@@ -12,6 +13,9 @@
         public void ConfigureServices(IServiceCollection service)
         {
             service.AddControllers();
+
+            service.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             service.AddEndpointsApiExplorer();
             service.AddSwaggerGen();
