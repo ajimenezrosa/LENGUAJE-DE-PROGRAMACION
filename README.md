@@ -237,7 +237,7 @@ app.Run();
     dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 
-#### porcederemos a usarlo, Lo primero que debemos hacer es crear una Clase.  Yo Creare la Clase ApplicationDbContext.cs
+#### Procederemos a usarlo, Lo primero que debemos hacer es crear una Clase.  Yo Creare la Clase ApplicationDbContext.cs
 
 
 
