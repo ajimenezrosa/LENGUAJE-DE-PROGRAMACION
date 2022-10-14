@@ -283,7 +283,7 @@ namespace PracticaLP
         {
         }
 
-        public DbSet<Author> Authores { get; set; }
+        public DbSet<Maestro> Maestros { get; set; }
     }
 }
 
