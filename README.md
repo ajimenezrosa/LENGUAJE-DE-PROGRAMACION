@@ -229,3 +229,34 @@ app.Run();
     dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 
+#### porcederemos a usarlo, Lo primero que debemos hacer es crear una Clase.  Yo Creare la Clase ApplicationDbContext.cs
+
+
+
+~~~c#
+using Microsoft.EntityFrameworkCore;
+
+namespace PracticaLP
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions options) : base(options)
+        {
+        }
+    }
+}
+
+~~~
+
+Esta seria nuestra clase ApplicationDbContext
+con ella podemos hacer las diferentes configuraciones de nuestro DBContext.  pero ademas podemos colocar las tablas que se crearan en nuestra base de datos.
+#
+
+
+Como un ejemplo crearemos una tabla a partir del esquema Maestros
+~~~C#
+        public DbSet<Maestro> Maestros { get; set; }
+~~~        
+
+
+#### Lo que le digo al sistema en este caso es que se creará una tabla a partir de la Clase Maestro  con sus valores.
