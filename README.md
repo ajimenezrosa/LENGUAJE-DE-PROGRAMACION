@@ -229,12 +229,12 @@ app.Run();
     Instalando en el proyecto...
 
        Microsoft.EntityFrameworkCore.SqlServer
-
-       Esto solo las personas que estan utilizando Visual Studio. Si estas utilizando Visual Studio Code no debes intalar este paquete.
        Microsoft.EntityFrameworkCore.tool
-     
+
+<!-- ###### Esto solo las personas que estan utilizando Visual Studio. Si estas utilizando Visual Studio Code no debes intalar este paquete.
      
     dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+      -->
 
 
 #### Procederemos a usarlo, Lo primero que debemos hacer es crear una Clase.  Yo Creare la Clase ApplicationDbContext.cs
@@ -374,4 +374,7 @@ namespace PracticaLP
     }
 }
 ~~~
+
+
+
 
