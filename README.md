@@ -1,14 +1,26 @@
 # LENGUAJE-DE-PROGRAMACION" 
 
 
+## [Creamos la Clase MaestroController](#maestroController)
+## [Route("api/autores")](#Route)
+
+## [Completando el codigo de nuestra classe Authores controller.](#Complementando)
+## [Configurar la Clase startup](#startup)
+
+## [Vamos a instalar Entity Framework Core en nuestra aplicación.](#EntityFramework)
+
+## [Ahora volvemos a la clase Startup al método configure services](#ConfigureConexion)
+
+## [Migracion de Base de datos](#migracion)
+## [Creando nuestro Http Get Nuestra Base de datos](#httpGet)
+## [Codigo del EndPoints HttpPost](#httppost)
 
 
-[ - Configurar la Clase startup](#startup)
+#
+#
 
 
-
-
-### Creamos la Clase MaestroController
+### Creamos la Clase MaestroController<a name="maestroController"></a>
 #### simpre los controladores se crean con el nombre del controlador seguido de la palabra controller todo pegado
 
 
@@ -44,7 +56,7 @@ namespace PracticaLP.Controllers
 
 ~~~
 
-## [Route("api/autores")]
+## [Route("api/autores")]<a name="Route"></a>
 #### Con este código definimos nuestra Ruta.
 #### El mismo que me permite hacer? que si hacemos un Get request a nuestra api/authors nos devuelva una lista de autores.
 
@@ -66,7 +78,7 @@ namespace PracticaLP.Entidades
 }
 ~~~
 
-## Completando el codigo de nuestra classe Authores controller.
+## Completando el codigo de nuestra classe Authores controller.<a name="Complementando"></a>
 
 #### Agregaremos código a nuestra clase y se verá así
 ~~~c#
@@ -217,7 +229,7 @@ app.Run();
  
 #
 
-## Vamos a instalar Entity Framework Core en nuestra aplicación.
+## Vamos a instalar Entity Framework Core en nuestra aplicación.<a name="EntityFramework"></a>
 #### Con Entity Framework core podemos crear una base de datos a partir de código C#
 
 #### No solo eso a través de este podemos conectarnos a bases de datos existentes.
@@ -316,7 +328,7 @@ el **Integrated Security** se refiere a que utilizarmos la claves del sistema op
 Nota: Tambien podemos colocar en este caso un usuario y password si lo deseamos.
 
 #
-## Ahora volvemos a la clase Startup al método configure services en el cual configuraremos nuestra conexión a la base de datos, que en nuestro caso es sql server
+## Ahora volvemos a la clase Startup al método configure services en el cual configuraremos nuestra conexión a la base de datos, que en nuestro caso es sql server<a name="ConfigureConexion"></a> 
 
 
 ~~~c#
@@ -376,7 +388,7 @@ namespace PracticaLP
 ~~~
 
 
-## Migracion de Base de datos:
+## Migracion de Base de datos:<a name="migracion"></a>
 #### Luego de configurar nuestro conxion String y de tener nuestras clases configuradas. 
 #
 #### A este punto debe ser posible para nosotros hacer una migracion a nuestras bases de datos.
@@ -386,7 +398,7 @@ namespace PracticaLP
 #### Si digitamos este codigo en el **Package Manager Console** realizaremos una migracion de nuestros modelos a nuestras bases de datos.
 
 # 
-## Creando nuestro Http Get Nuestra Base de datos
+## Creando nuestro Http Get Nuestra Base de datos<a name="httpGet"></a>
 
 #### Entonces vamos a trabajar con la creación de registros en nuestra base de datos, lo que vamos a hacer primero es que vamos a crear una acción httppost aquí para que los clientes de nuestra aplicación web puedan enviarnos un autor que ellos quieran. crear en la base de datos
 
@@ -417,7 +429,7 @@ options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
 
 ~~~
 #
-## Codigo del EndPoints HttpPost
+## Codigo del EndPoints HttpPost<a name="httppost"></a>
 
 ~~~c#
         [HttpPost]
@@ -457,3 +469,8 @@ options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             return await context.Authores.ToListAsync();
         }
 ~~~
+
+
+#
+# ¡Recuerda que la perseverancia es la clave del éxito!
+#
