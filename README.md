@@ -376,5 +376,13 @@ namespace PracticaLP
 ~~~
 
 
+## Migracion de Base de datos:
+#### Luego de configurar nuestro conxion String y de tener nuestras clases configuradas. 
+#
+#### A este punto debe ser posible para nosotros hacer una migracion a nuestras bases de datos.
 
+    Add-Migration Inicial
 
+#### Si digitamos este codigo en el **Package Manager Console** realizaremos una migracion de nuestros modelos a nuestras bases de datos.
+
+# 
