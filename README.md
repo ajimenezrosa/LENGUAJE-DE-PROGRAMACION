@@ -431,3 +431,29 @@ options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
         }
 ~~~        
 
+
+### Aprovechando que tenemos este **ApplicationDbContext** aquí yo lo que voy a hacer Es que voy a retornar un listado de autores de la base de datos para eso cómo Vamos a comunicarnos con una base de datos la **buena práctica** es utilizar programación asíncrona y para utilizar programación asíncrona en un método debo Utilizar **async - await**
+
+#
+### Pasaremos de esto.......
+~~~c#
+        public ActionResult<List<Author>> Get()
+        {
+            return new List<Maestro>()
+            {
+                new Maestro() { Id = 1, nombre = "Alejandro Jimenez"},
+                new Maestro() { Id = 2, nombre = "Jose Miguel Fernandez"}
+
+            };
+
+        }
+~~~
+
+### A esto.....
+~~~c#
+        [HttpGet]
+        public async Task<ActionResult<List<Author>>> Get()
+        {
+            return await context.Authores.ToListAsync();
+        }
+~~~

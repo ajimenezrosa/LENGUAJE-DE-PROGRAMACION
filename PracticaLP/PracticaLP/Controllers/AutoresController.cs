@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PracticaLP.Entidades;
 
 namespace PracticaLP.Controllers
@@ -7,15 +8,26 @@ namespace PracticaLP.Controllers
     [Route("api/autores")]
     public class AutoresController: ControllerBase
     {
-        [HttpGet]
-        public ActionResult<List<Author>> Get()
-        {
-            return new List<Author>()
-            {
-                new Author() { Id = 1, nombre = "Alejandro Jimenez"},
-                new Author() { Id = 2, nombre = "Jose Miguel Fernandez"}
+        private readonly ApplicationDbContext context;
 
-            };
+        public AutoresController(ApplicationDbContext context)
+        {
+            this.context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Author>>> Get()
+        {
+            return await context.Authores.ToListAsync();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Post(Author autor)
+        {
+            context.Add(autor);
+            await context.SaveChangesAsync();
+            return Ok();
+
 
         }
 
