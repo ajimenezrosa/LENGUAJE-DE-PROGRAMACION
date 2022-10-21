@@ -386,3 +386,48 @@ namespace PracticaLP
 #### Si digitamos este codigo en el **Package Manager Console** realizaremos una migracion de nuestros modelos a nuestras bases de datos.
 
 # 
+## Creando nuestro Http Get Nuestra Base de datos
+
+#### Entonces vamos a trabajar con la creación de registros en nuestra base de datos, lo que vamos a hacer primero es que vamos a crear una acción httppost aquí para que los clientes de nuestra aplicación web puedan enviarnos un autor que ellos quieran. crear en la base de datos
+
+#### Para poder usar el ***AplicationDbContext*** que creamos anteriormente, necesito usar la inyección de dependencia.
+
+
+~~~c#
+        private readonly ApplicationDbContext context;
+
+        public AutoresController(ApplicationDbContext context)
+        {
+            this.context = context;
+        }
+~~~
+
+#### Puedo colocar el constructor de mi clase **ApplicationDbContext** de autores y aquí recibiré una instancia de aplicacióndbcontext
+#### La inicializaré como un campo  por lo tanto, es accesible acceder a ella desde cualquier parte de mi clase.
+# 
+    Ya hemos visto cómo hacer esto en el aula.
+    En cualquier caso, siéntase libre de preguntarme si tiene alguna pregunta. Esto es fundamental para que el código funcione de manera efectiva.
+# 
+
+
+#### Cuándo configuramos está **applicationdbcontext** en un sistema de inyección de dependencias, lo configuramos cuando en la clase **Startup** dijitamos el siguiente codigo
+~~~C#
+service.AddDbContext<ApplicationDbContext>(options => 
+options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+
+~~~
+#
+## Codigo del EndPoints HttpPost
+
+~~~c#
+        [HttpPost]
+        public async Task<ActionResult> Post(Author autor)
+        {
+            context.Add(autor);
+            await context.SaveChangesAsync();
+            return Ok();
+
+
+        }
+~~~        
+
