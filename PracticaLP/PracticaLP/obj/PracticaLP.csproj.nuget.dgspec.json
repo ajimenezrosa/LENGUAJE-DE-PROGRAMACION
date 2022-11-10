@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {}
+    "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {}
   },
   "projects": {
-    "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {
+    "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
+        "projectUniqueName": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
         "projectName": "PracticaLP",
-        "projectPath": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
+        "projectPath": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\PracticaLP.csproj",
         "packagesPath": "C:\\Users\\jajim\\.nuget\\packages\\",
-        "outputPath": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\PracticaLP\\PracticaLP\\obj\\",
+        "outputPath": "E:\\UCSD\\git_LENGUAJE DE PROGRAMACION\\LENGUAJE-DE-PROGRAMACION\\PracticaLP\\PracticaLP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jajim\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,30 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -63,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,108 @@
+1 Para definir nuestras rutas en la clase controler utilizamos el codigo
+
+[ApiController]
+[Route("api/autores")] **
+[Routas("api/autores")]
+using PracticaLP.Entidades;
+
+2 Con Entity Framework core podemos crear una base de datos a partir de código C#
+Verdadero **
+Falso
+
+
+3 Clase con la que podemos hacer las diferentes configuraciones de nuestro DBContext:
+
+DbContext
+ApplicationDbContext **
+DbSet
+Microsoft.EntityFrameworkCore.SqlServer
+appsettings.json
+
+4  para configurar nuestra conexion a base de datos usamos
+
+DbContext
+ApplicationDbContext **
+DbSet
+Microsoft.EntityFrameworkCore.SqlServer
+appsettings.json
+
+
+5 se utiliza para la creacion de un endpoints que nos permita insertar registros en nuestra base de datos
+
+ [HttpPost] **
+ [HttpGet]
+ [HttpDelete]
+ [HttpInsert]
+ [HttpSelect]
+
+
+6 Se Utiliza para hacer consultas a a travez de nuestro endpoints 
+ [HttpPost]
+ [HttpGet] **
+ [HttpDelete]
+ [HttpInsert]
+ [HttpSelect]
+
+
+7 Serial el nombre del servidor de Base de Datos en un conexion string
+
+Data Source **
+Base de Datos
+Initial Catalog
+servidor 
+Integrated Security
+
+8 Seria el nombre de la base de datos que utilizarmos en un conexion string
+Data Source
+Base de Datos
+Initial Catalog **
+servidor 
+Integrated Security
+
+9 Se refiere a que utilizarmos la claves del sistema operativo Windows para autenticarnos en la DB.
+Data Source
+Base de Datos
+Initial Catalog **
+servidor 
+Integrated Security
+
+
+10 colocamos lo siguiente en nuestra Clase para poder usar las funcionalidades de los controladores.
+
+using Microsoft.AspNetCore.Mvc;
+[ApiController] **
+ [Route("api/autores")]
+var app = builder.Build();
+
+11 para utilizar programación asíncrona en un método debo Utilizar 
+
+return Ok()
+async - await **
+Task
+Ninguna de las Anterionres
+
+12  Lo que le digo al sistema en este caso es que se creará una tabla a partir de la Clase Maestro con sus valores.
+
+
+create Class Maestros();
+public DbSet<Maestro> Maestros { get; set; } **
+Maestros maestros = new Maestros();
+Ninguna de las anteriores
+
+13 simpre los controladores se crean con el nombre del controlador seguido de la palabra controller todo pegado
+Verdadero **
+falso
+
+14 El Codigo "return await context.Authores.ToListAsync();"
+
+retorna un listado de autores de nuestra DB utilizan en context
+Insert autores en nuestra base de datos
+Crea una clase autores.
+presenta un error debido a que la progrmacion asincrona no existe.
+
+
+
+15 Para poder usar el AplicationDbContext que creamos anteriormente, necesito usar la inyección de dependencia.
+Verdadero **
+falso
+
