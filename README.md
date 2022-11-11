@@ -17,6 +17,7 @@
 # 
 ## [Actualizando registros en nuestro API](#put)
 
+##  [endpoint para hacer delete en nuestras bases de datos](#delete1)
 
 #
 #
@@ -512,7 +513,7 @@ options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
 ##### Siendo 1 el valor del id de tipo entero que declaramos anteriormente.
 
 
-##  endpoint para hacer delete en nuestras bases de datos.
+##  endpoint para hacer delete en nuestras bases de datos.<a name="delete1"></a>
 ~~~C#
         [HttpDelete("{id:int}")] //api/autores/1
         public async Task<ActionResult> Delete(int id)
