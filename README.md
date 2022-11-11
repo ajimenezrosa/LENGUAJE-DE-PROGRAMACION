@@ -14,6 +14,8 @@
 ## [Migracion de Base de datos](#migracion)
 ## [Creando nuestro Http Get Nuestra Base de datos](#httpGet)
 ## [Codigo del EndPoints HttpPost](#httppost)
+# 
+## [Actualizando registros en nuestro API](#put)
 
 
 #
@@ -470,7 +472,7 @@ options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
         }
 ~~~
 
-# Actualizando registros en nuestro API.
+# Actualizando registros en nuestro API.<a name="put"></a>
 #### Para actualizar registros en nuestra API usaremos un **put**.
 
 #### Esto sería equivalente a lo que es una actualización en nuestro crud.
