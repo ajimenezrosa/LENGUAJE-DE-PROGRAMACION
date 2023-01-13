@@ -68,7 +68,7 @@
 #
 #### Las API de diferentes aplicaciones se pueden integrar juntas para intercambiar datos y realizar una función específica, lo que permite la interacción entre aplicaciones. Varios sitios web como Amazon, Google, Facebook, LinkedIn y Twitter utilizan API basadas en REST que permiten a los usuarios comunicarse con estos servicios en la nube.
 #
-#### Este blog profundizará en la definición de la API REST y cubrirá todos sus aspectos básicos, incluido el significado de la API REST, sus principios, métodos y más.
+<!-- #### Este blog profundizará en la definición de la API REST y cubrirá todos sus aspectos básicos, incluido el significado de la API REST, sus principios, métodos y más. -->
 ### ¿Qué es la API REST?
 #### En 2000, Roy Fielding definió REST como un estilo arquitectónico y una metodología de uso frecuente en el desarrollo de servicios de Internet, como los sistemas hipermedia distribuidos.
     La forma completa de REST API es la interfaz de programación de aplicaciones de transferencia de estado representacional, más comúnmente conocida como servicio web REST API. Significa que cuando se llama a una API RESTful, el servidor transferir a representación de los recursos solicitados estado al sistema del cliente.
@@ -83,9 +83,9 @@
 
 #### Los protocolos típicos de transferencia de datos, como SOAP (Protocolo simple de acceso a objetos), ofrecen una excelente seguridad e integridad de datos capacidades. Además, SOAP ofrece una lógica de reintento integrada para compensar las comunicaciones fallidas. Pero tales protocolos también son difíciles de trabajar. RESTful API es una alternativa más simple que se ha desarrollado exponencialmente en los últimos años. Las personas a menudo se confunden con respecto a los estándares REST. En comparación con SOAP, los servicios web más antiguos, REST es más flexible y fácil de implementar.
 #
-#### REST generalmente se prefiere sobre el SOAP más robusto ya que el anterior usa menor ancho de banda, haciéndolo más apropiado para los servicios web integrales del mundo. Utiliza el protocolo HTTP para obtener datos o realizar operaciones en varios formatos de datos (como XML y JSON); permite procesos más rápidos.
+#### REST generalmente se prefiere sobre el [SOAP](https://es.wikipedia.org/wiki/Simple_Object_Access_Protocol) más robusto ya que el anterior usa menor ancho de banda, haciéndolo más apropiado para los servicios web integrales del mundo. Utiliza el protocolo HTTP para obtener datos o realizar operaciones en varios formatos de datos (como XML y JSON); permite procesos más rápidos.
 #
-#### En consecuencia, SOAP utiliza la transferencia de datos XML, definiendo operaciones como puertos WSDL unidireccionales con varias instancias de proceso que comparten los mismos procedimientos. En REST, las operaciones se describen en los propios mensajes. Además, hay una sola dirección para cada instancia de proceso.
+#### En consecuencia, SOAP utiliza la transferencia de datos XML, definiendo operaciones como puertos [WSDL](https://es.wikipedia.org/wiki/WSDL) unidireccionales con varias instancias de proceso que comparten los mismos procedimientos. En REST, las operaciones se describen en los propios mensajes. Además, hay una sola dirección para cada instancia de proceso.
 #
 #### Otra diferencia entre SOAP y REST radica en cómo se acoplan estos protocolos. SOAP está fuertemente acoplado, mientras que este último está débilmente acoplado. El acoplamiento débil significa que los módulos son independientes y las variaciones en uno no perturban el funcionamiento de los demás. Como resultado, hay flexibilidad y reutilización cuando se agregan, sustituyen o ajustan módulos. Por otro lado, el acoplamiento estrecho significa que los módulos tienden a ser codependientes. Por lo tanto, las variaciones en un módulo pueden tener un efecto en todo el sistema. Todas estas diferencias son las que hacen que la API sea RESTful.
 #
@@ -104,6 +104,16 @@
 - Solicitud PUT  para alterar el estado de los datos (como un objeto, archivo o bloque)
 - Solicitud POST  para crear datos
 - Solicitud DELETE Borrar petición para eliminarlo
+
+
+|Acción	|HTTP method	|URI relativo|
+|-------|---------------|------------|
+|Obtener un producto según el id.	|GET	|/api/products/id|
+|Crear un nuevo producto	        |POST	|/api/products|
+|Actualizar un producto	            |PUT	|/api/products/id|
+|Eliminar un producto	            |Delete	|/api/products/id
+
+Para obtener información sobre cómo implementar esta API con ASP.NET Web API, consulte Creación de una [API web que admita operaciones CRUD](https://learn.microsoft.com/es-es/aspnet/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api).
 #
 ## ¿Para qué se utilizan las API RESTful?
 #### Para comprender mejor qué es la API RESTful, para qué se utiliza y cómo funciona, consideremos un ejemplo.
