@@ -138,9 +138,45 @@ Para obtener información sobre cómo implementar esta API con ASP.NET Web API, 
 ### 1.3.	  Configuración de un entorno de desarrollo para C# y .NET<a name="13"></a>
 
 ![](https://youtu.be/m_iLmZR8EYs?t=34)
-[![Comprehensive Markdown Crash Course](https://miro.medium.com/max/1400/1*9R5BVkgSLM8vb0NyAN_2mQ.png)](https://youtu.be/m_iLmZR8EYs?t=34)
+[![Comprehensive Markdown Crash Course](https://miro.medium.com/max/1400/1*9R5BVkgSLM8vb0NyAN_2mQ.png)](https://www.youtube.com/watch?v=N6mTQSIN30A)
 
 #
 
+## UNIDAD II.- Conceptos Básicos de C#  y .NET
+### 2.1	 Tipos de datos y Variables
+#
+## El sistema de tipos de C#
+    Artículo 22/09/2022 Tiempo de lectura: 16 minutos
 
+#### C# es un lenguaje fuertemente tipado. Todas las variables y constantes tienen un tipo, al igual que todas las expresiones que se evalúan como un valor. Cada declaración del método especifica un nombre, el tipo y naturaleza (valor, referencia o salida) para cada parámetro de entrada y para el valor devuelto. La biblioteca de clases .NET define tipos numéricos integrados, así como tipos complejos que representan una amplia variedad de construcciones. Entre ellas se incluyen el sistema de archivos, conexiones de red, colecciones y matrices de objetos, y fechas. Los programas de C# típicos usan tipos de la biblioteca de clases, así como tipos definidos por el usuario que modelan los conceptos que son específicos del dominio del problema del programa.
+     
+#### Entre la información almacenada en un tipo se pueden incluir los siguientes elementos:
+
+- El espacio de almacenamiento que requiere una variable del tipo.
+- Los valores máximo y mínimo que puede representar.
+- Los miembros (métodos, campos, eventos, etc.) que contiene.
+- El tipo base del que hereda.
+- Interfaces que implementa.
+- Los tipos de operaciones permitidas.
+#
+#### El compilador usa información de tipo para garantizar que todas las operaciones que se realizan en el código cuentan con seguridad de tipos. Por ejemplo, si declara una variable de tipo int, el compilador le permite usar la variable en operaciones de suma y resta. Si intenta realizar esas mismas operaciones en una variable de tipo bool, el compilador genera un error, como se muestra en el siguiente ejemplo:
+#
+~~~c#
+int a = 5;
+int b = a + 2; //OK
+
+bool test = true;
+
+// Error. Operator '+' cannot be applied to operands of type 'int' and 'bool'.
+int c = a + test;
+~~~
+
+
+
+
+#
+### 2.2	  Declaraciones condicionales y bucles
+### 2.3	  Clases y Objetos
+### 2.4	  Manejo básico de Excepciones
+### 2.5	   Ejercicios
 
