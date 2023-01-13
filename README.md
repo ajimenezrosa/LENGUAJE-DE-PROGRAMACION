@@ -7,7 +7,7 @@
 ## [UNIDAD I.- Introducción al diseño y desarrollo de API REST](#unidad1)	
 ### [1.1.	  Descripción General de las API REST y sus casos de uso](#11)
 ### [1.2.	  Comprensión de los principios del diseño de API REST.](#12)
-### [1.3.	  Configuración de un entorno de desarrollo para C# y .NET](#23)
+### [1.3.	  Configuración de un entorno de desarrollo para C# y .NET](#13)
 #
 ## UNIDAD II.- Conceptos Básicos de C#  y .NET
 ### 2.1	 Tipos de datos y Variables
