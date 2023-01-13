@@ -1,3 +1,8 @@
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--AHI0Pqi0--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/qt1l5zhbmh6gnyk1qluh.jpg)
+
+| Alejandro Jimenez | UCSD |
+|---------------------|------------------------|
+|![](https://avatars.githubusercontent.com/u/7384546?v=4)|![](https://pbs.twimg.com/profile_images/901546652091252736/6Clcdv1L_400x400.jpg)|
 
 
 # Lenguaje de programación  REST API C#
