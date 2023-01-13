@@ -3,11 +3,11 @@
 # Lenguaje de programación  REST API C#
 
 
-# UNIDADES DE APRENDIZAJES	CONTENIDOS
-## UNIDAD I.- Introducción al diseño y desarrollo de API REST	
-### 1.1.	  Descripción General de las API REST y sus casos de uso
-### 1.2.	  Comprensión de los principios del diseño de API REST.
-### 1.3.	  Configuración de un entorno de desarrollo para C# y .NET
+# [UNIDADES DE APRENDIZAJES	CONTENIDOS](#unidad1)
+## [UNIDAD I.- Introducción al diseño y desarrollo de API REST](#unidad1)	
+### [1.1.	  Descripción General de las API REST y sus casos de uso](#11)
+### [1.2.	  Comprensión de los principios del diseño de API REST.](#12)
+### [1.3.	  Configuración de un entorno de desarrollo para C# y .NET](#23)
 #
 ## UNIDAD II.- Conceptos Básicos de C#  y .NET
 ### 2.1	 Tipos de datos y Variables
@@ -36,8 +36,10 @@
 ### 5.4	    implementación de una API REST en la nube ejemplos
 ### 5.5	    Creación de un proyecto REST API completo
 #
+#
 
-## Introducción a ASP.NET Web API 2 (C#)
+
+## Introducción a ASP.NET Web API (C#)<a name="unidad1"></a>
 #### En este tutorial, usará ASP.NET Web API para crear una API web que devuelva una lista de productos.
 
 #### HTTP no es solo para servir páginas web. HTTP también es una plataforma eficaz para compilar API que exponen servicios y datos. HTTP es simple, flexible y omnipresente. Casi cualquier plataforma que se pueda considerar tiene una biblioteca HTTP, por lo que los servicios HTTP pueden llegar a una amplia gama de clientes, incluidos exploradores, dispositivos móviles y aplicaciones de escritorio tradicionales.
@@ -47,7 +49,7 @@
 
 
 
-### 1.1.	  Descripción General de las API REST y sus casos de uso
+### 1.1.	  Descripción General de las API REST y sus casos de uso<a name="11"></a>
 #
 ### ¿Qué son las APIs?
 #### Las Interfaces de Programacion de Aplicaciones (APIs por sus siglas en inglés) son construcciones disponibles en los lenguajes de programación que permiten a los desarrolladores crear funcionalidades complejas de una manera simple. Estas abstraen el código más complejo para proveer una sintaxis más fácil de usar en su lugar.
@@ -63,7 +65,7 @@
 
 #
 #
-### 1.2.	  Comprensión de los principios del diseño de API REST.
+### 1.2.	  Comprensión de los principios del diseño de API REST.<a name="12"></a>
 #### Una API (interfaz del programa de aplicación) es un conjunto de reglas que permite que diferentes programas se comuniquen entre sí. Describe la manera apropiada para que un desarrollador de software componga un programa en un servidor que se comunica con varias aplicaciones cliente.
 #
 #### Las API de diferentes aplicaciones se pueden integrar juntas para intercambiar datos y realizar una función específica, lo que permite la interacción entre aplicaciones. Varios sitios web como Amazon, Google, Facebook, LinkedIn y Twitter utilizan API basadas en REST que permiten a los usuarios comunicarse con estos servicios en la nube.
@@ -128,11 +130,12 @@ Para obtener información sobre cómo implementar esta API con ASP.NET Web API, 
 
 
 #
-### 1.3.	  Configuración de un entorno de desarrollo para C# y .NET
+### 1.3.	  Configuración de un entorno de desarrollo para C# y .NET<a name="13"></a>
 
 ![](https://youtu.be/m_iLmZR8EYs?t=34)
 [![Comprehensive Markdown Crash Course](https://miro.medium.com/max/1400/1*9R5BVkgSLM8vb0NyAN_2mQ.png)](https://youtu.be/m_iLmZR8EYs?t=34)
 
 #
+
 
 
