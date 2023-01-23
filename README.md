@@ -15,11 +15,11 @@
 ### [1.3.	  Configuración de un entorno de desarrollo para C# y .NET](#13)
 #
 ## UNIDAD II.- Conceptos Básicos de C#  y .NET
-### 2.1	 Tipos de datos y Variables
-### 2.2	  Declaraciones condicionales y bucles
-### 2.3	  Clases y Objetos
-### 2.4	  Manejo básico de Excepciones
-### 2.5	   Ejercicios
+### [2.1	 Tipos de datos y Variables](#21)
+### [2.2	  Declaraciones condicionales y bucles](#22)
+### [2.3	  Clases y Objetos](#23)
+### [2.4	  Manejo básico de Excepciones](#24)
+### [2.5	   Ejercicios](#25)
 #
 
 ## UNIDAD III.- Crear una API REST simple utilizando el marco ASP.NET Core
@@ -145,7 +145,7 @@ Para obtener información sobre cómo implementar esta API con ASP.NET Web API, 
 ## UNIDAD II.- Conceptos Básicos de C#  y .NET
 ### 2.1	 Tipos de datos y Variables
 #
-## El sistema de tipos de C#
+## El sistema de tipos de C#<a name="21"></a>
     Artículo 22/09/2022 Tiempo de lectura: 16 minutos
 
 #### C# es un lenguaje fuertemente tipado. Todas las variables y constantes tienen un tipo, al igual que todas las expresiones que se evalúan como un valor. Cada declaración del método especifica un nombre, el tipo y naturaleza (valor, referencia o salida) para cada parámetro de entrada y para el valor devuelto. La biblioteca de clases .NET define tipos numéricos integrados, así como tipos complejos que representan una amplia variedad de construcciones. Entre ellas se incluyen el sistema de archivos, conexiones de red, colecciones y matrices de objetos, y fechas. Los programas de C# típicos usan tipos de la biblioteca de clases, así como tipos definidos por el usuario que modelan los conceptos que son específicos del dominio del problema del programa.
@@ -175,8 +175,109 @@ int c = a + test;
 
 
 #
-### 2.2	  Declaraciones condicionales y bucles
-### 2.3	  Clases y Objetos
-### 2.4	  Manejo básico de Excepciones
-### 2.5	   Ejercicios
+### 2.2	  Declaraciones condicionales y bucles<a name="22"></a>
+#### Instrucciones y bucles de C# if:
+
+Ejemplo
+
+~~~c#
+int a = 5;
+int b = 6;
+if (a + b > 10)
+    Console.WriteLine("The answer is greater than 10.");
+~~~    
+# 
+### Operaciones conjuntas con if y else
+
+#### Para ejecutar un código distinto en las bifurcaciones true y false, cree una bifurcación else para que se ejecute cuando la condición sea false. Pruebe una rama else. Agregue las dos últimas líneas del código siguiente (ya debe tener los cuatro primeros):
+
+ ~~~c#
+ int a = 5;
+int b = 3;
+if (a + b > 10)
+    Console.WriteLine("The answer is greater than 10");
+else
+    Console.WriteLine("The answer is not greater than 10");
+~~~
+#
+#### La instrucción que sigue a la palabra clave else se ejecuta solo si la condición de prueba es false. La combinación de if y else con condiciones booleanas ofrece toda la eficacia necesaria para administrar una condición true y false simultáneamente.
+
+     Importante
+
+    La sangría debajo de las instrucciones if y else se utiliza para los lectores humanos. El lenguaje C# no considera significativos los espacios en blanco ni las sangrías. La instrucción que sigue a la palabra clave if o else se ejecutará en función de la condición. Todos los ejemplos de este tutorial siguen una práctica común para aplicar sangría a las líneas en función del flujo de control de las instrucciones.
+
+##### Dado que la sangría no es significativa, debe usar { y } para indicar si desea que más de una instrucción forme parte del bloque que se ejecuta de forma condicional. Los programadores de C# suelen usar esas llaves en todas las cláusulas if y else. El siguiente ejemplo es igual que el que acaba de crear. Modifique el código anterior para que coincida con el código siguiente:
+~~~c#
+int a = 5;
+int b = 3;
+if (a + b > 10)
+{
+    Console.WriteLine("The answer is greater than 10");
+}
+else
+{
+    Console.WriteLine("The answer is not greater than 10");
+}
+~~~
+
+### Uso de bucles para repetir las operaciones
+
+Ejemplo
+~~~c#
+int counter = 0;
+while (counter < 10)
+{
+    Console.WriteLine($"Hello World! The counter is {counter}");
+    counter++;
+}
+~~~
+#### La instrucción while comprueba una condición y ejecuta la instrucción o el bloque de instrucciones que aparece después de while. Comprueba repetidamente la condición, ejecutando esas instrucciones hasta que la condición sea false.
+
+#### En este ejemplo aparece otro operador nuevo. El código ++ que aparece después de la variable **counter** es el operador de incremento. Suma un valor de uno al valor de counter y almacena dicho valor en la variable de counter.
+#
+## do while
+#### El bucle while prueba la condición antes de ejecutar el código que sigue a while. El bucle do ... while primero ejecuta el código y después comprueba la condición. El bucle do while se muestra en el código siguiente:
+
+~~~c#
+int counter = 0;
+do
+{
+    Console.WriteLine($"Hello World! The counter is {counter}");
+    counter++;
+} while (counter < 10);
+~~~
+
+
+## Operaciones con el bucle for
+#### Operaciones con el bucle for
+~~~c#
+for (int index = 0; index < 10; index++)
+{
+    Console.WriteLine($"Hello World! The index is {index}");
+}
+~~~
+
+#### El código anterior funciona de la misma forma que los bucles while y do que ya ha usado. La instrucción for consta de tres partes que controlan su funcionamiento.
+
+#### La primera parte es el inicializador de for: int index = 0; declara que index es la variable de bucle y establece su valor inicial en 0.
+
+#### La parte central es la condición de for: index < 10 declara que este bucle for debe continuar ejecutándose mientras que el valor del contador sea menor que diez.
+
+#### La última parte es el iterador de for: index++ especifica cómo modificar la variable de bucle después de ejecutar el bloque que sigue a la instrucción for. En este caso, especifica que index debe incrementarse en uno cada vez que el bloque se ejecuta
+#
+
+
+
+
+### 2.3	  Clases y Objetos<a name="23"</a>
+[Clases y Objetos](https://github.com/ajimenezrosa/IntroduccionProgramacionOO#objetosClases)
+
+### 2.4	  Manejo básico de Excepciones<a name="24"</a>
+[Manejo básico de Excepciones](https://github.com/ajimenezrosa/IntroduccionProgramacionOO#EjercicioMetodoExcepciones2)
+### 2.5	   Ejercicios<a name="25"</a>
+
+#### Crear un programa de consola que aplique el concepto de clases y maneje exceptiion.
+
+
+
 
