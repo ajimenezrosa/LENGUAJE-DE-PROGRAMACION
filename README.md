@@ -269,12 +269,12 @@ for (int index = 0; index < 10; index++)
 
 
 
-### 2.3	  Clases y Objetos<a name="23"</a>
+### 2.3	  Clases y Objetos<a name="23"></a>
 [Clases y Objetos](https://github.com/ajimenezrosa/IntroduccionProgramacionOO#objetosClases)
 
 ### 2.4	  Manejo básico de Excepciones<a name="24"></a>
 [Manejo básico de Excepciones](https://github.com/ajimenezrosa/IntroduccionProgramacionOO#EjercicioMetodoExcepciones2)
-### 2.5	   Ejercicios<a name="25"</a>
+### 2.5	   Ejercicios<a name="25"></a>
 
 #### Crear un programa de consola que aplique el concepto de clases y maneje exceptiion.
 
