@@ -279,5 +279,47 @@ for (int index = 0; index < 10; index++)
 #### Crear un programa de consola que aplique el concepto de clases y maneje exceptiion.
 
 
+# 
+
+## UNIDAD III.- Crear una API REST simple utilizando el marco ASP.NET Core
+
+#### Para crear una API REST simple utilizando el marco ASP.NET Core, sigue los siguientes pasos:
+
+- Abre Visual Studio y crea un nuevo proyecto de ASP.NET Core API. Puedes hacerlo seleccionando "Nuevo Proyecto" en el menú "Archivo" y luego seleccionando "ASP.NET Core Web Application" en la sección "Web".
+
+- Selecciona "API" como el tipo de proyecto y haz clic en "Crear".
+
+- Una vez que se haya creado el proyecto, abre el archivo "Startup.cs" y agrega el siguiente código en el método "ConfigureServices":
+#
+~~~C#
+services.AddControllers();
+~~~
+
+- A continuación, agrega el siguiente código en el método "Configure":
+#
+~~~C#
+app.UseRouting();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+~~~
+
+- Ahora, crea un controlador para tu API. Puedes hacerlo haciendo clic derecho en la carpeta "Controllers" y seleccionando "Agregar -> Controlador".
+
+- Agrega los métodos GET, POST, PUT y DELETE en el controlador para proporcionar las operaciones CRUD básicas. Por ejemplo, aquí está el código para el método GET:
+
+~~~c#
+[HttpGet]
+public IEnumerable<string> Get()
+{
+    return new string[] { "value1", "value2" };
+}
+
+~~~
+Ejemplos de Creaciones de WebApis segundo parcial
+
+[Creacion de ApiRest Utilizando C#.net Core](https://github.com/ajimenezrosa/LENGUAJE-DE-PROGRAMACION/blob/main/2022/README_2022_3.md)
 
 
