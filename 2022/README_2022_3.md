@@ -315,7 +315,7 @@ esto quiere decir que se creara una tabla con los valores que tenemos en nuestra
     }
   },
   "ConnectionStrings": {
-    "defaultConnection": "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=WebApis;Integrated Security=True;Encrypt=False""
+    "defaultConnection": "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=WebApis;Integrated Security=True;Encrypt=False"
   },
   "AllowedHosts": "*"
 }
