@@ -323,3 +323,146 @@ Ejemplos de Creaciones de WebApis segundo parcial
 [Creacion de ApiRest Utilizando C#.net Core](https://github.com/ajimenezrosa/LENGUAJE-DE-PROGRAMACION/blob/main/2022/README_2022_3.md)
 
 
+Creacion de EndPoint para nuestro REST API. 
+
+### El objetivo de este ejercicio es crear un empleo utilizando la entidad clientes en este caso lo que haremos será crear un crud para un web Api específicamente un Api Rest
+
+#
+#### Las siguientes clases serán instanciadas durante la ejecución de la práctica esto lo haremos haciendo control punto Al momento de digitar nuestro código en las clases y objetos qué nos presenten error.
+     ojo debemos estar seguros de que los mismos están escritos correctamente
+
+~~~c#
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebAPIAutores.Entidades;
+~~~
+#
+#### Como ya hemos conversado para que esto sea un controlador debe de heredar de la clase **controllerbase**.
+
+####  Además para poder utilizar cada uno de los EndPoint de nuestro **WEBAPI** debemos utilizar la etiqueta **[Apicontroller]** a su vez la etiqueta **Rout()** se utiliza para definir las rutas en las cuales serán consumidos nuestros **EndPoint** Al momento de ser terminados
+
+~~~c#
+    [ApiController]
+    [Route("api/clientes")]
+    public class ClientesController: ControllerBase
+    {
+        private readonly ApplicationDbContext context;
+
+        public ClientesController(ApplicationDbContext context)
+        {
+            this.context = context;
+        }
+    }
+~~~
+
+#### Debemos utilizar el application dbcontext para poder tener acceso a nuestras bases de datos que para nuestro caso es una base de datos sql server
+
+# 
+
+## HttpGet
+#
+#### El método **GET()** nos permite extraer datos de nuestra base de datos en este caso retornar un archivo **json** el cual podrá ser consumido desde cualquier dispositivo que deseemos, Tenemos en este caso  un ejemplo de la extracción de los datos de la tabla clientes
+
+~~~C#
+        [HttpGet]
+        public async Task<ActionResult<List<Clientes>>> Get()
+        {
+            return await context.clientes.ToListAsync();
+
+        }
+~~~
+# 
+#### Utilizamos **async await** para crear un método asincrono esto nos permite consultar nuestras bases de datos sin que las mismas se bloqueen Al momento de que otra persona esté accediendo el mismo registro 
+
+    nota no puedes tener una **async** una **await** ni una **await** sin un **async** porque este presentará un problema o un error de código
+
+
+
+## HttpPost
+#
+#### el método post nos permite hacer inserciones en nuestras bases de datos a través de nuestra web Api 
+
+~~~c#
+        [HttpPost]
+        public async Task<ActionResult> Post(Clientes cliente)
+        {
+            context.Add(cliente);
+            await context.SaveChangesAsync();
+            return Ok();
+
+        }
+~~~
+
+#### Esto es un ejemplo de un método post simple en el cual podrás hacer inserciones a la tabla de clientes a través del web Api
+
+#
+
+## HttpPut
+#
+#### El método put realiza actualizaciones a nuestras tablas a través de nuestro webapi.  Cómo podrás ver este tiene un poco más de código que los demás métodos debido a que tiene la necesidad de hacer varias validaciones.
+####  Por ejemplo 
+ - validar si el ID del cliente es igual al ID enviado por web Api 
+ - validar que el registro que se está modificando en realidad existe en nuestra base de datos.
+ 
+ ###  En caso de que el registro exista y sea igual al ID del objeto que se va a modificar procederemos a realizar las modificaciones de lugar en caso contrario retornar a un error
+
+~~~c#
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(Clientes cliente, int id)
+        {
+            if(cliente.Id != id)
+            {
+                return BadRequest("El id del Cliente no coincide con el id ");
+            }
+
+            var existe = await context.clientes.AnyAsync(x => x.Id == id);
+
+            if(!existe)
+            {
+                return NotFound();
+            }
+
+            context.Update(cliente);
+            await context.SaveChangesAsync();
+            return Ok();
+
+
+
+        }
+
+~~~
+
+#
+## HttpDelete
+#
+
+#### Por último en Point http delete el mismo eliminar registros en la base de datos a través de nuestra web Api para el mismo debemos realizar la validación de que el registro exista en caso contrario retornar a un error de existir el registro procederá eliminarlo
+
+~~~C#
+        [HttpDelete]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var existe = await context.clientes.AnyAsync(x => x.Id == id);
+
+            if(!existe)
+            {
+                return NotFound();
+            }
+            context.Remove(new Clientes() { Id = id });
+            await context.SaveChangesAsync();
+            return Ok();
+
+        }
+
+~~~
+
+#
+#### Al finalizar nuestro ejercicio nuestro código se verá de la siguiente manera.
+
+#### Trata de hacerlo paso a paso no copiar código los errores no son el problema Debes tener la capacidad de resolverlos busca investiga , pregunta.
+
+# Recuerda que la perseverancia es la clave para el éxito
+
+
+
+
